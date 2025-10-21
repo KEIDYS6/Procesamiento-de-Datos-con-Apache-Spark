@@ -60,7 +60,7 @@ Código del Consumidor Spark Streaming (stream_processor.py)
 | 4 | Productor Kafka | python3 producer.py |
 | 5 | Spark Streaming | spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 stream_processor.py |
 
-## 📚 Créditos
+## Créditos
 
 **Autor:** Keidys Vanegas  
 **Fecha:** Octubre 2025
