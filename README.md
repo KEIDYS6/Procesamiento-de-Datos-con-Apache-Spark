@@ -21,21 +21,36 @@ Instala las librerías necesarias en Python:
 ```bash
 pip install pyspark kafka-python
 ```
-
-## 🧩 Procesamiento Batch
-
-```bash
+## Inicio de Servicios de Hadoop (HDFS y YARN)
+Antes de ejecutar cualquier comando de Spark/HDFS, verifica que los servicios estén activos
+Inicia con el usuario donde tengas hadoop instalado. 
+# 1. Iniciar el sistema de archivos distribuido (HDFS)
 start-dfs.sh
+# 2. Iniciar el gestor de recursos (YARN)
 start-yarn.sh
+# 3. Verificar que los procesos estén corriendo (debes ver NameNode, DataNode, ResourceManager, NodeManager)
+
+## Descarga y Carga del Dataset a HDFS
+Descarga el archivo CSV y cárgalo al directorio de HDFS que usará el script.
+Descargar el archivo (ejecutar en tu máquina local o VM):
 wget -O datos_colombia.csv https://www.datos.gov.co/api/views/xfif-myr2/rows.csv?accessType=DOWNLOAD
-hdfs dfs -mkdir -p /user/hadoop/tarea_bigdata
-hdfs dfs -put datos_colombia.csv /user/hadoop/tarea_bigdata/
-spark-submit batch_processor.py
-```
 
-## 🔄 Procesamiento Streaming
+## crear un script PySpark (batch_processor.py) para realizar las tareas de Batch:
+nano batch_processor.py
+Código Python (batch_processor.py)
 
-Abrir 5 terminales para iniciar los servicios y procesos:
+
+## Procesamiento Streaming
+
+## Crea un nuevo archivo llamado producer.py 
+nano producer.py 
+Código del Productor de Kafka (producer.py)
+
+## Crea un nuevo archivo llamado stream_processor.py
+nano stream_processor.py
+Código del Consumidor Spark Streaming (stream_processor.py)
+
+## Abrir 5 terminales para iniciar los servicios y procesos:
 
 | Terminal | Acción | Comando |
 |-----------|--------|---------|
