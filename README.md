@@ -30,6 +30,9 @@ start-dfs.sh
 start-yarn.sh
 # 3. Verificar que los procesos estén corriendo (debes ver NameNode, DataNode, ResourceManager, NodeManager)
 
+# Iniciar spark 
+pyspark
+
 # Descarga y Carga del Dataset a HDFS
 Descarga el archivo CSV y cárgalo al directorio de HDFS que usará el script.
 Descargar el archivo (ejecutar en tu máquina local o VM):
